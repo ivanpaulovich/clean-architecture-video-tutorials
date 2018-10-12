@@ -1,6 +1,6 @@
 # Clean Architecture Video Tutorials
 
-Live Streaming and Video Tutorials on Clean Architecture, DDD, TDD using .NET Core every week on Paulovich.NET Youtube channel. Check out the following schedule to not miss any topic!
+Live Streaming and Video Tutorials on Clean Architecture, DDD and TDD using .NET Core published every week on Paulovich.NET Youtube channel. Check out the following schedule so you don't miss the topics!
 
 ## Season 01 - Create an Account Balance Service
 
