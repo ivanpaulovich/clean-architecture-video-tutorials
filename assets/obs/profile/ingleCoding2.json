@@ -3,6 +3,48 @@
         "deinterlace_field_order": 0,
         "deinterlace_mode": 0,
         "enabled": true,
+        "filters": [
+            {
+                "deinterlace_field_order": 0,
+                "deinterlace_mode": 0,
+                "enabled": true,
+                "flags": 0,
+                "hotkeys": {},
+                "id": "noise_suppress_filter",
+                "mixers": 255,
+                "monitoring_type": 0,
+                "muted": false,
+                "name": "Noise Suppression",
+                "private_settings": {},
+                "push-to-mute": false,
+                "push-to-mute-delay": 0,
+                "push-to-talk": false,
+                "push-to-talk-delay": 0,
+                "settings": {},
+                "sync": 0,
+                "volume": 1.0
+            },
+            {
+                "deinterlace_field_order": 0,
+                "deinterlace_mode": 0,
+                "enabled": true,
+                "flags": 0,
+                "hotkeys": {},
+                "id": "noise_gate_filter",
+                "mixers": 255,
+                "monitoring_type": 0,
+                "muted": false,
+                "name": "Noise Gate",
+                "private_settings": {},
+                "push-to-mute": false,
+                "push-to-mute-delay": 0,
+                "push-to-talk": false,
+                "push-to-talk-delay": 0,
+                "settings": {},
+                "sync": 0,
+                "volume": 1.0
+            }
+        ],
         "flags": 2,
         "hotkeys": {
             "libobs.mute": [],
@@ -26,8 +68,8 @@
         "sync": 0,
         "volume": 1.0
     },
-    "current_program_scene": "Browser",
-    "current_scene": "Browser",
+    "current_program_scene": "Coding",
+    "current_scene": "Main",
     "current_transition": "Fade",
     "groups": [
         {
@@ -36,8 +78,10 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
+                "libobs.hide_scene_item.github-icon": [],
                 "libobs.hide_scene_item.white-bg": [],
                 "libobs.hide_scene_item.white-bg 2": [],
+                "libobs.show_scene_item.github-icon": [],
                 "libobs.show_scene_item.white-bg": [],
                 "libobs.show_scene_item.white-bg 2": []
             },
@@ -54,7 +98,7 @@
             "settings": {
                 "custom_size": true,
                 "cx": 600,
-                "cy": 115,
+                "cy": 105,
                 "id_counter": 0,
                 "items": [
                     {
@@ -71,17 +115,46 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 1,
-                        "locked": true,
+                        "locked": false,
                         "name": "white-bg",
                         "pos": {
                             "x": 0.0,
-                            "y": 100.0
+                            "y": 90.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
                             "x": 1.0,
-                            "y": 0.15000000596046448
+                            "y": 0.1499999612569809
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "white-bg 2",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 0.89999997615814209
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -99,18 +172,18 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 3,
-                        "locked": true,
-                        "name": "white-bg 2",
+                        "id": 5,
+                        "locked": false,
+                        "name": "github-icon",
                         "pos": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 423.844970703125,
+                            "y": 7.13177490234375
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.29340535402297974,
+                            "y": 0.29251450300216675
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -141,7 +214,7 @@
         },
         "scripts-tool": []
     },
-    "name": "Single-plus-Dual-Coding",
+    "name": "SingleCoding",
     "preview_locked": false,
     "quick_transitions": [
         {
@@ -167,19 +240,10 @@
             "name": "Main"
         },
         {
-            "name": "Guest"
-        },
-        {
-            "name": "Dual"
-        },
-        {
             "name": "Coding"
         },
         {
             "name": "Browser"
-        },
-        {
-            "name": "Overlay-Cams-Horizontal"
         },
         {
             "name": "Overlay-Cams-Vertical"
@@ -188,13 +252,16 @@
             "name": "Overlay-Cam-Wrapper"
         },
         {
-            "name": "Overlay-Guest-Wrapper"
-        },
-        {
             "name": "Overlay-Host-Signature"
         },
         {
-            "name": "Overlay-Guest-Signature"
+            "name": "Overlay-Music"
+        },
+        {
+            "name": "Overlay-StreamLabs"
+        },
+        {
+            "name": "Overlay-Keys-Combo"
         }
     ],
     "sources": [
@@ -208,16 +275,17 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Chrome",
+            "name": "Window Capture",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "owner_name": "Google Chrome",
-                "window": 613,
-                "window_name": "New Tab"
+                "owner_name": "KeyCastr",
+                "show_empty_names": true,
+                "window": 1891,
+                "window_name": ""
             },
             "sync": 0,
             "volume": 1.0
@@ -229,18 +297,14 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Chrome": [],
-                "libobs.hide_scene_item.Music": [],
-                "libobs.hide_scene_item.Overlay-Cams-Vertical": [],
-                "libobs.show_scene_item.Chrome": [],
-                "libobs.show_scene_item.Music": [],
-                "libobs.show_scene_item.Overlay-Cams-Vertical": []
+                "libobs.hide_scene_item.Window Capture": [],
+                "libobs.show_scene_item.Window Capture": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Browser",
+            "name": "Overlay-Keys-Combo",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
@@ -248,7 +312,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 7,
+                "id_counter": 2,
                 "items": [
                     {
                         "align": 5,
@@ -263,22 +327,73 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 6,
-                        "locked": true,
-                        "name": "Chrome",
+                        "id": 2,
+                        "locked": false,
+                        "name": "Window Capture",
                         "pos": {
-                            "x": 95.99993896484375,
-                            "y": 0.0
+                            "x": 875.0,
+                            "y": 869.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.51428574323654175,
-                            "y": 0.51428574323654175
+                            "x": 0.65499997138977051,
+                            "y": 0.65499997138977051
                         },
                         "scale_filter": "disable",
                         "visible": true
-                    },
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "browser_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Widgets",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "url": "https://streamlabs.com/alert-box/v3/8A257E86FE8342E8FD0C"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Widgets": [],
+                "libobs.show_scene_item.Widgets": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Overlay-StreamLabs",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 1,
+                "items": [
                     {
                         "align": 5,
                         "bounds": {
@@ -292,8 +407,66 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 2,
-                        "locked": true,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Widgets",
+                        "pos": {
+                            "x": 570.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Music": [],
+                "libobs.show_scene_item.Music": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Overlay-Music",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 1,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
                         "name": "Music",
                         "pos": {
                             "x": 0.0,
@@ -304,6 +477,128 @@
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "av_capture_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Logitec",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device": "0x14140000046d085c",
+                "device_name": "C922 Pro Stream Webcam",
+                "frame_rate": {
+                    "denominator": 1000000.0,
+                    "numerator": 30000030.0
+                },
+                "preset": "AVCaptureSessionPresetHigh",
+                "resolution": "{\n    \"height\": 1080,\n    \"width\": 1920\n}",
+                "use_preset": false
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "window_capture",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "VSCode",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "owner_name": "Code",
+                "show_empty_names": false,
+                "show_shadow": false,
+                "window": 240,
+                "window_name": "wallet"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Overlay-Cams-Vertical": [],
+                "libobs.hide_scene_item.Overlay-Keys-Combo": [],
+                "libobs.hide_scene_item.Overlay-Music": [],
+                "libobs.hide_scene_item.Overlay-StreamLabs": [],
+                "libobs.hide_scene_item.VSCode": [],
+                "libobs.show_scene_item.Overlay-Cams-Vertical": [],
+                "libobs.show_scene_item.Overlay-Keys-Combo": [],
+                "libobs.show_scene_item.Overlay-Music": [],
+                "libobs.show_scene_item.Overlay-StreamLabs": [],
+                "libobs.show_scene_item.VSCode": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Coding",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 21,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": true,
+                        "name": "VSCode",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.57142859697341919,
+                            "y": 0.57135361433029175
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -321,18 +616,105 @@
                         "crop_right": 972,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 7,
-                        "locked": false,
+                        "id": 10,
+                        "locked": true,
                         "name": "Overlay-Cams-Vertical",
                         "pos": {
-                            "x": 1629.0,
+                            "x": 1555.0,
                             "y": 221.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.39885222911834717,
-                            "y": 0.39814814925193787
+                            "x": 0.5,
+                            "y": 0.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 19,
+                        "locked": true,
+                        "name": "Overlay-Music",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 20,
+                        "locked": true,
+                        "name": "Overlay-StreamLabs",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 21,
+                        "locked": true,
+                        "name": "Overlay-Keys-Combo",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -347,20 +729,119 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "github-icon",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "/Users/ivanpaulovich/git/clean-architecture-video-tutorials/assets/images/github-icon.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "white-bg 2",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 100,
+                "width": 600
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_ft2_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "ivanpaulovich",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color1": 4278190080,
+                "color2": 4278190080,
+                "font": {
+                    "face": "Helvetica",
+                    "flags": 0,
+                    "size": 64,
+                    "style": "Regular"
+                },
+                "text": "@ivanpaulovich"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "white-bg",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4294901760,
+                "height": 100,
+                "width": 600
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Overlay-Cam-Wrapper": [],
-                "libobs.hide_scene_item.Overlay-Guest-Wrapper": [],
-                "libobs.hide_scene_item.Overlay-Host-Signature": [],
-                "libobs.show_scene_item.Overlay-Cam-Wrapper": [],
-                "libobs.show_scene_item.Overlay-Guest-Wrapper": [],
-                "libobs.show_scene_item.Overlay-Host-Signature": []
+                "libobs.hide_scene_item.SE-flag": [],
+                "libobs.hide_scene_item.background": [],
+                "libobs.hide_scene_item.ivanpaulovich": [],
+                "libobs.show_scene_item.SE-flag": [],
+                "libobs.show_scene_item.background": [],
+                "libobs.show_scene_item.ivanpaulovich": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Overlay-Cams-Vertical",
+            "name": "Overlay-Host-Signature",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
@@ -368,13 +849,129 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 3,
+                "id_counter": 7,
                 "items": [
                     {
                         "align": 5,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 1,
+                        "locked": false,
+                        "name": "white-bg",
+                        "pos": {
+                            "x": 1238.0,
+                            "y": 1046.95654296875
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.1183333396911621,
+                            "y": 0.16826082766056061
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 3,
+                        "locked": false,
+                        "name": "white-bg 2",
+                        "pos": {
+                            "x": 1238.0,
+                            "y": 946.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.1183333396911621,
+                            "y": 1.0095652341842651
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 5,
+                        "locked": false,
+                        "name": "github-icon",
+                        "pos": {
+                            "x": 1712.0,
+                            "y": 954.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.328125,
+                            "y": 0.32812497019767761
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "background",
+                        "pos": {
+                            "x": 1238.0,
+                            "y": 946.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.1183333396911621,
+                            "y": 1.1217391490936279
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "bounds_align": 0,
                         "bounds_type": 0,
@@ -385,16 +982,16 @@
                         "group_item_backup": false,
                         "id": 2,
                         "locked": false,
-                        "name": "Overlay-Guest-Wrapper",
+                        "name": "ivanpaulovich",
                         "pos": {
-                            "x": 0.0,
-                            "y": 540.0
+                            "x": 1249.0,
+                            "y": 956.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.5,
-                            "y": 0.5
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -402,8 +999,8 @@
                     {
                         "align": 5,
                         "bounds": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "bounds_align": 0,
                         "bounds_type": 0,
@@ -412,254 +1009,18 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 1,
+                        "id": 6,
                         "locked": false,
-                        "name": "Overlay-Cam-Wrapper",
+                        "name": "SE-flag",
                         "pos": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 1809.0,
+                            "y": 967.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.5,
-                            "y": 0.5
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": false,
-                        "name": "Overlay-Host-Signature",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.50052082538604736,
-                            "y": 0.50092589855194092
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Overlay-Cam-Wrapper": [],
-                "libobs.hide_scene_item.Overlay-Guest-Wrapper": [],
-                "libobs.show_scene_item.Overlay-Cam-Wrapper": [],
-                "libobs.show_scene_item.Overlay-Guest-Wrapper": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Overlay-Cams-Horizontal",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 2,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": true,
-                        "name": "Overlay-Guest-Wrapper",
-                        "pos": {
-                            "x": 960.0,
-                            "y": 252.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.5,
-                            "y": 0.5
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": true,
-                        "name": "Overlay-Cam-Wrapper",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 252.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.5,
-                            "y": 0.5
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "MediaSource.Restart": [],
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "ffmpeg_source",
-            "mixers": 255,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Music",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "local_file": "/Users/ivanpaulovich/Youtube/Super_Blues.mp3",
-                "looping": true
-            },
-            "sync": 0,
-            "volume": 0.009260999970138073
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Music": [],
-                "libobs.hide_scene_item.Overlay-Cam-Wrapper": [],
-                "libobs.show_scene_item.Music": [],
-                "libobs.show_scene_item.Overlay-Cam-Wrapper": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Main",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 3,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": true,
-                        "name": "Music",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": true,
-                        "name": "Overlay-Cam-Wrapper",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 2.75,
+                            "y": 2.7619047164916992
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -765,18 +1126,18 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.background": [],
-                "libobs.hide_scene_item.github-icon": [],
-                "libobs.hide_scene_item.ivanpaulovich": [],
-                "libobs.show_scene_item.background": [],
-                "libobs.show_scene_item.github-icon": [],
-                "libobs.show_scene_item.ivanpaulovich": []
+                "libobs.hide_scene_item.Overlay-Cam-Wrapper": [],
+                "libobs.hide_scene_item.Overlay-Music": [],
+                "libobs.hide_scene_item.Overlay-StreamLabs": [],
+                "libobs.show_scene_item.Overlay-Cam-Wrapper": [],
+                "libobs.show_scene_item.Overlay-Music": [],
+                "libobs.show_scene_item.Overlay-StreamLabs": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Overlay-Host-Signature",
+            "name": "Main",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
@@ -789,35 +1150,6 @@
                     {
                         "align": 5,
                         "bounds": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": true,
-                        "id": 1,
-                        "locked": true,
-                        "name": "white-bg",
-                        "pos": {
-                            "x": 1271.0,
-                            "y": 1026.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 0.15000000596046448
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -827,13 +1159,13 @@
                         "crop_left": 0,
                         "crop_right": 0,
                         "crop_top": 0,
-                        "group_item_backup": true,
-                        "id": 3,
+                        "group_item_backup": false,
+                        "id": 1,
                         "locked": true,
-                        "name": "white-bg 2",
+                        "name": "Overlay-Cam-Wrapper",
                         "pos": {
-                            "x": 1271.0,
-                            "y": 926.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -859,39 +1191,10 @@
                         "group_item_backup": false,
                         "id": 4,
                         "locked": true,
-                        "name": "background",
+                        "name": "Overlay-Music",
                         "pos": {
-                            "x": 1271.0,
-                            "y": 926.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
                             "x": 0.0,
                             "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": true,
-                        "name": "ivanpaulovich",
-                        "pos": {
-                            "x": 1284.0,
-                            "y": 937.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -917,16 +1220,16 @@
                         "group_item_backup": false,
                         "id": 5,
                         "locked": true,
-                        "name": "github-icon",
+                        "name": "Overlay-StreamLabs",
                         "pos": {
-                            "x": 1778.0,
-                            "y": 931.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.328125,
-                            "y": 0.328125
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -941,99 +1244,29 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
-            "hotkeys": {},
-            "id": "color_source",
-            "mixers": 0,
+            "hotkeys": {
+                "MediaSource.Restart": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
             "monitoring_type": 0,
             "muted": false,
-            "name": "white-bg",
+            "name": "Music",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "color": 4294901760,
-                "height": 100,
-                "width": 600
+                "local_file": "/Users/ivanpaulovich/Youtube/Super_Blues.mp3",
+                "looping": true
             },
             "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "text_ft2_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "ivanpaulovich",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "color1": 4278190080,
-                "color2": 4278190080,
-                "font": {
-                    "face": "Helvetica",
-                    "flags": 0,
-                    "size": 64,
-                    "style": "Regular"
-                },
-                "text": "@ivanpaulovich"
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "color_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "white-bg 2",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "height": 100,
-                "width": 600
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "image_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "github-icon",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "file": "/Users/ivanpaulovich/git/clean-architecture-video-tutorials/assets/images/github-icon.png"
-            },
-            "sync": 0,
-            "volume": 1.0
+            "volume": 0.009260999970138073
         },
         {
             "deinterlace_field_order": 0,
@@ -1042,18 +1275,14 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.background": [],
-                "libobs.hide_scene_item.calvinmann": [],
-                "libobs.hide_scene_item.github-icon": [],
-                "libobs.show_scene_item.background": [],
-                "libobs.show_scene_item.calvinmann": [],
-                "libobs.show_scene_item.github-icon": []
+                "libobs.hide_scene_item.Overlay-Cam-Wrapper": [],
+                "libobs.show_scene_item.Overlay-Cam-Wrapper": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Overlay-Guest-Signature",
+            "name": "Overlay-Cams-Vertical",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
@@ -1061,7 +1290,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 6,
+                "id_counter": 3,
                 "items": [
                     {
                         "align": 5,
@@ -1075,110 +1304,58 @@
                         "crop_left": 0,
                         "crop_right": 0,
                         "crop_top": 0,
-                        "group_item_backup": true,
-                        "id": 1,
-                        "locked": true,
-                        "name": "white-bg",
-                        "pos": {
-                            "x": 1271.0,
-                            "y": 1026.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 0.15000000596046448
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": true,
-                        "id": 3,
-                        "locked": true,
-                        "name": "white-bg 2",
-                        "pos": {
-                            "x": 1271.0,
-                            "y": 926.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
                         "group_item_backup": false,
                         "id": 1,
-                        "locked": true,
-                        "name": "background",
-                        "pos": {
-                            "x": 1271.0,
-                            "y": 926.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 4,
                         "locked": false,
-                        "name": "calvinmann",
+                        "name": "Overlay-Cam-Wrapper",
                         "pos": {
-                            "x": 1289.0,
-                            "y": 941.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.5,
+                            "y": 0.5
                         },
                         "scale_filter": "disable",
                         "visible": true
-                    },
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Chrome": [],
+                "libobs.hide_scene_item.Overlay-Cams-Vertical": [],
+                "libobs.hide_scene_item.Overlay-Music": [],
+                "libobs.hide_scene_item.Overlay-StreamLabs": [],
+                "libobs.show_scene_item.Chrome": [],
+                "libobs.show_scene_item.Overlay-Cams-Vertical": [],
+                "libobs.show_scene_item.Overlay-Music": [],
+                "libobs.show_scene_item.Overlay-StreamLabs": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Browser",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 11,
+                "items": [
                     {
                         "align": 5,
                         "bounds": {
@@ -1193,429 +1370,17 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 6,
-                        "locked": false,
-                        "name": "github-icon",
-                        "pos": {
-                            "x": 1778.0,
-                            "y": 931.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.328125,
-                            "y": 0.328125
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "text_ft2_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "calvinmann",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "color1": 4278190080,
-                "color2": 4278190080,
-                "font": {
-                    "face": "Helvetica",
-                    "flags": 0,
-                    "size": 64,
-                    "style": "Regular"
-                },
-                "text": "@calvinmann"
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Music": [],
-                "libobs.hide_scene_item.Overlay-Guest-Wrapper": [],
-                "libobs.show_scene_item.Music": [],
-                "libobs.show_scene_item.Overlay-Guest-Wrapper": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Guest",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 3,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
                         "locked": true,
-                        "name": "Music",
+                        "name": "Chrome",
                         "pos": {
-                            "x": 0.0,
+                            "x": 95.99993896484375,
                             "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": true,
-                        "name": "Overlay-Guest-Wrapper",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Overlay-Guest-Signature": [],
-                "libobs.hide_scene_item.border": [],
-                "libobs.show_scene_item.Overlay-Guest-Signature": [],
-                "libobs.show_scene_item.border": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Overlay-Guest-Wrapper",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 2,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": true,
-                        "name": "border",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": false,
-                        "name": "Overlay-Guest-Signature",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Music": [],
-                "libobs.hide_scene_item.Overlay-Cams-Horizontal": [],
-                "libobs.show_scene_item.Music": [],
-                "libobs.show_scene_item.Overlay-Cams-Horizontal": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Dual",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 6,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": true,
-                        "name": "Music",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 4,
-                        "locked": true,
-                        "name": "Overlay-Cams-Horizontal",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "color_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "border",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "color": 4279473663,
-                "height": 1080,
-                "width": 1920
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Music": [],
-                "libobs.hide_scene_item.Overlay-Cams-Vertical": [],
-                "libobs.hide_scene_item.VSCode": [],
-                "libobs.show_scene_item.Music": [],
-                "libobs.show_scene_item.Overlay-Cams-Vertical": [],
-                "libobs.show_scene_item.VSCode": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Coding",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 13,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": true,
-                        "name": "VSCode",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.57142859697341919,
-                            "y": 0.57135361433029175
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 8,
-                        "locked": true,
-                        "name": "Music",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.51428574323654175,
+                            "y": 0.51428574323654175
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -1633,18 +1398,76 @@
                         "crop_right": 972,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 10,
-                        "locked": false,
+                        "id": 8,
+                        "locked": true,
                         "name": "Overlay-Cams-Vertical",
                         "pos": {
-                            "x": 1629.0,
+                            "x": 1555.0,
                             "y": 221.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.39885222911834717,
-                            "y": 0.39814814925193787
+                            "x": 0.5,
+                            "y": 0.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 10,
+                        "locked": false,
+                        "name": "Overlay-Music",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 11,
+                        "locked": false,
+                        "name": "Overlay-StreamLabs",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -1664,18 +1487,16 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "VSCode",
+            "name": "Chrome",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "owner_name": "Code",
-                "show_empty_names": false,
-                "show_shadow": false,
-                "window": 131,
-                "window_name": "CustomerOutput.cs — wallet03"
+                "owner_name": "Google Chrome",
+                "window": 855,
+                "window_name": "Alert Box / Streamlabs"
             },
             "sync": 0,
             "volume": 1.0
@@ -1686,26 +1507,18 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "av_capture_input",
+            "id": "image_source",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Logitec",
+            "name": "SE-flag",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "device": "0x14140000046d085c",
-                "device_name": "C922 Pro Stream Webcam",
-                "frame_rate": {
-                    "denominator": 1000000.0,
-                    "numerator": 30000030.0
-                },
-                "preset": "AVCaptureSessionPresetHigh",
-                "resolution": "{\n    \"height\": 1080,\n    \"width\": 1920\n}",
-                "use_preset": false
+                "file": "/Users/ivanpaulovich/git/clean-architecture-video-tutorials/assets/images/se.png"
             },
             "sync": 0,
             "volume": 1.0
