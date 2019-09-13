@@ -21,6 +21,8 @@ Live Streaming and Video Tutorials on Clean Architecture, DDD and TDD using .NET
 [Wednesday, 11 September 2019].
 * `S02E05` [Shinning Frameworks and DDD?!](https://www.youtube.com/watch?v=OmxBqmmhoHg).
 [Thursday, 12 September 2019].
+* `S02E06` [Clean Architecture Essentials](https://www.youtube.com/watch?v=NjPjCxTIf4M).
+[Friday, 13 September 2019].
 
 Leave your comments! What you want to hear next?
 
