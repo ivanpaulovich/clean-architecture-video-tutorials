@@ -23,6 +23,7 @@ Live Streaming and Video Tutorials on Clean Architecture, DDD and TDD using .NET
 [Thursday, 12 September 2019].
 * `S02E06` [Clean Architecture Essentials](https://www.youtube.com/watch?v=NjPjCxTIf4M).
 [Friday, 13 September 2019].
+* `S02E07` [Hexagonal and Clean Architecture styles. Same or Different?](https://www.youtube.com/watch?v=FNQbyZu-NAo&feature=youtu.be].
 
 Leave your comments! What you want to hear next?
 
